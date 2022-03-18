@@ -8,8 +8,8 @@ import { mockData } from '../mock-data';
 import { extractLocations, getEvents } from '../api';
 
 describe('<App /> component', () => {
-
   let AppWrapper;
+
   beforeAll(() => {
     AppWrapper = shallow(<App />);
   });
@@ -23,7 +23,7 @@ describe('<App /> component', () => {
   });
 
   test('render NumberOfEvents', () => {
-    expect(AppWrapper.find(NumberOfEvents)).toHaveLength(1);
+    expect(AppWrapper.find(NumberOfEvents)).toHaveLength(0);
   });
 });
 
@@ -68,4 +68,11 @@ describe('<App /> integration', () => {
     AppWrapper.unmount();
   });
 
+  test('passing the number of events', () => {
+    const AppWrapper = mount(<App />);
+    const AppNumberOfEventsState = AppWrapper.state('numberOfEvents');
+    expect(AppNumberOfEventsState).not.toEqual(undefined);
+    expect(AppWrapper.find(EventList).props().numberOfEvents).toEqual(32);
+    AppWrapper.unmount();
+  });
 });
