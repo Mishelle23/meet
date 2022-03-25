@@ -6,6 +6,8 @@ import { mockData } from '../mock-data';
 import CitySearch from '../CitySearch';
 import { extractLocations } from '../api';
 
+const locations = extractLocations(mockData);
+
 const feature = loadFeature('./src/features/filterEventsByCity.feature');
 
 defineFeature(feature, test => {
