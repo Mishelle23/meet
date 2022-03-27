@@ -29,7 +29,7 @@ defineFeature(feature, test => {
 
     when('user types chosen number', () => {
       AppWrapper.update();
-      AppWrapper.find('.numberOfEvents_input').simulate('change', { target: { value: '1' } });
+      AppWrapper.find('.numberOfEvents').simulate('change', { target: { value: '1' } });
     });
 
     then('this number of events would be displayed', () => {

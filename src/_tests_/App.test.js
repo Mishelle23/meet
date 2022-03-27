@@ -23,7 +23,7 @@ describe('<App /> component', () => {
   });
 
   test('render NumberOfEvents', () => {
-    expect(AppWrapper.find(NumberOfEvents)).toHaveLength(0);
+    expect(AppWrapper.find(NumberOfEvents)).toHaveLength(1);
   });
 });
 

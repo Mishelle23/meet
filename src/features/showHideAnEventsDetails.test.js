@@ -30,8 +30,8 @@ defineFeature(feature, test => {
 
     when('user clicks on particular event', () => {
       AppWrapper.update();
-      expect(AppWrapper.find('.event_detailsButton')).toHaveLength(2);
-      AppWrapper.find('.event_detailsButton').at(0).simulate('click');
+      expect(AppWrapper.find('.show-details')).toHaveLength(2);
+      AppWrapper.find('.show-details').at(0).simulate('click');
     });
 
     then('event details would be showing', () => {
@@ -44,11 +44,11 @@ defineFeature(feature, test => {
     given('event is displaying details', async () => {
       AppWrapper = await mount(<App />);
       AppWrapper.update();
-      AppWrapper.find('.event_detailsButton').at(0).simulate('click');
+      AppWrapper.find('.show-details').at(0).simulate('click');
     });
 
     when('user clicks on this event', () => {
-      AppWrapper.find('.event_detailsButton').at(0).simulate('click');
+      AppWrapper.find('.show-details').at(0).simulate('click');
       expect(AppWrapper.find('.event_moreDetails')).toHaveLength(0);
     });
 

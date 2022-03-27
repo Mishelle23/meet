@@ -1,13 +1,18 @@
 import React, { Component } from "react";
 
 class Event extends Component {
-  state = {
-    collapsed: true,
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      collapsed: true,
+      detailsButtonText: 'More details',
+    };
+  }
 
   handleClick = () => {
     this.setState({
       collapsed: !this.setState.collapsed,
+      detailsButtonText: this.state.collapsed ? 'Hide details' : 'More details',
     });
   };
 
@@ -25,12 +30,11 @@ class Event extends Component {
 
         <button
           className={`${collapsed ? "show" : "hide"}-details`}
-          onClick={this.handleClick}
-        >
-          {collapsed ? "Show Details" : "Hide Details"}
+          onClick={() => this.handleClick()}>
+          {this.state.detailsButtonText}
         </button>
 
-        {!collapsed &&
+        {!this.state.collapsed &&
           <div className={`extra-details show`}>
             <a href={event.htmllink}>
               See datails on Google Calendar
