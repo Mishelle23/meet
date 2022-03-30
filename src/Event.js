@@ -11,7 +11,7 @@ class Event extends Component {
 
   handleClick = () => {
     this.setState({
-      collapsed: !this.setState.collapsed,
+      collapsed: !this.state.collapsed,
       detailsButtonText: this.state.collapsed ? 'Hide details' : 'More details',
     });
   };

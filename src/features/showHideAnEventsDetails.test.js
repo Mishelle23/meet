@@ -35,7 +35,7 @@ defineFeature(feature, test => {
     });
 
     then('event details would be showing', () => {
-      expect(AppWrapper.find('.event_moreDetails')).toHaveLength(1);
+      expect(AppWrapper.find('.extra-details')).toHaveLength(1);
     });
   });
 

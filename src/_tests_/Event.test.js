@@ -25,20 +25,4 @@ describe('<EventList /> component', () => {
   test('render show details button', () => {
     expect(EventWrapper.find('.show-details')).toHaveLength(1);
   });
-
-  test('open details when button is clicked', () => {
-    EventWrapper.setState({
-      collapsed: true
-    });
-    EventWrapper.find('.show-details').simulate('click');
-    expect(EventWrapper.state('collapsed')).toBe(true);
-  });
-
-  test('hide details when button is clicked', () => {
-    EventWrapper.setState({
-      collapsed: false
-    });
-    EventWrapper.find('.hide-details').simulate('click');
-    expect(EventWrapper.state('collapsed')).toBe(true);
-  });
 });
