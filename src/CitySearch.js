@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { InfoAlert } from '/.Alert';
+import { InfoAlert } from './Alert';
 
 class CitySearch extends Component {
   state = {
@@ -51,6 +51,7 @@ class CitySearch extends Component {
   render() {
     return (
       <div className="CitySearch">
+        <InfoAlert text={this.state.infoText} />
         <input
           type="text"
           className="city"
@@ -66,7 +67,7 @@ class CitySearch extends Component {
           ))}
           <li onClick={() => this.handleItemClicked("all")}>
             <b>See all cities</b>
-            <InfoAlert text={this.state.infoText} />
+
           </li>
         </ul>
       </div>
