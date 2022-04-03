@@ -7,7 +7,7 @@ import { getEvents, extractLocations } from './api';
 import './nprogress.css';
 import { OfflineAlert } from './Alert';
 import WelcomeScreen from './WelcomeScreen';
-import { getEvents, extractLocations, checkToken, getAccessToken } from
+import { checkToken, getAccessToken } from
   './api';
 
 
