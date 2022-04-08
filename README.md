@@ -1,5 +1,5 @@
 ![Meet App Img](https://user-images.githubusercontent.com/82170643/162518778-03c10858-9c99-4406-9106-faeebffa1f99.PNG)
-![Meet App Img](https://user-images.githubusercontent.com/82170643/162518778-03c10858-9c99-4406-9106-faeebffa1f99.PNG)
+
 
 # Meet App
 This app  is a collection of upcoming events of cities and times.
